@@ -8,10 +8,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/dough" element={<Timer title="Chill Dough"/>} />
-        <Route path="/preheat" element={<Timer  title="Preheat"/>} />
-        <Route path="/bake" element={<Timer  title="Bake"/>} />
-        <Route path="/cool" element={<Timer  title="Cool"/>} />
+        <Route path="/dough" element={<Timer title="Chill Dough" startTime={30} />} />
+        <Route path="/preheat" element={<Timer  title="Preheat" startTime={120} />} />
+        <Route path="/bake" element={<Timer  title="Bake" startTime={60} />} />
+        <Route path="/cool" element={<Timer  title="Cool" startTime={60}/>} />
       </Routes>
     </Router>
   );
