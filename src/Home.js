@@ -29,6 +29,10 @@ function Home () {
                 <Link 
                 key={path}
                 to={path}
+                style={{
+                    textDecoration: 'none',
+                    color: 'black',     
+                }}
                 >
                     <img 
                         src={image}
