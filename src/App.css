@@ -4,7 +4,7 @@ html, body, #root {
   margin: 0;
 }
 .pixel-bg {
-  background-image: url('./assets/cfdd8679-0262-4dc7-bef9-d142ae884238.jpg');
+  background-image: url('./assets/background.jpg');
   background-size: cover; /* or 'repeat' for tiled effect */
   background-repeat: repeat;
   height: 100%;
