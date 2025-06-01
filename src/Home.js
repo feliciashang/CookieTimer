@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import cookieImage from './assets/cookieImage.jpg';
+import fanImage from './assets/fan.png';
+import ovenImage from './assets/ovenImage.png';
+import rollerImage from './assets/roller.png';
 
 
 function Home () {
     const steps = [
-        { path: '/dough', label: 'Chill dough', image: cookieImage },
-        { path: '/preheat', label: 'Preheat', image: cookieImage },
+        { path: '/dough', label: 'Chill dough', image: rollerImage },
+        { path: '/preheat', label: 'Preheat', image: ovenImage },
         { path: '/bake', label: 'Bake', image: cookieImage },
-        { path: '/cool', label: 'Cool', image: cookieImage },
+        { path: '/cool', label: 'Cool', image: fanImage },
   ];
     return (
         <div style={{textAlign: 'center'}}>
@@ -37,7 +40,12 @@ function Home () {
                     <img 
                         src={image}
                         alt={label}
-                        style={{ width: '45%', height: 'auto'}}
+                        style=
+                        {{ 
+                            width: '45%', 
+                            height: 'auto',
+                            transform: label === 'Chill dough' ? 'rotate(-25deg)' : 'none',
+                        }}
                     />
                     <div style={{fontSize: '1.5rem'}}>
                         {label}
