@@ -15,16 +15,15 @@ function Home () {
   ];
     return (
         <div style={{textAlign: 'center'}}>
-            <h1 style={{fontSize: '3rem'}}>
+            <h1 style={{fontSize: '5rem'}}>
                 Cookie Timer
             </h1>
-            <p style={{fontSize: '2rem'}}>
+            <p style={{fontSize: '3rem'}}>
                 Which step are you on?
             </p>
             <div style={{ 
                 display: 'grid', 
                 gridTemplateColumns: 'repeat(2, 1fr)', 
-                gap: '1.5rem',
                 maxWidth: '800px',
                 margin: '0 auto',
             }}>

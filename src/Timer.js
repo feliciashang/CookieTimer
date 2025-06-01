@@ -10,7 +10,7 @@ const Timer = ({title, startTime, image}) => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    if (time == 0) {
+    if (time == 58) {
     setShowPopup(true)
     }
   }, [time]
@@ -57,7 +57,7 @@ const Timer = ({title, startTime, image}) => {
   }
   return (
     <div style={{textAlign: 'center'}}>
-      <h2 style={{fontSize: '4rem'}}>{title}</h2>
+      <h2 style={{fontSize: '6rem'}}>{title}</h2>
       {showPopup ? ( 
             <div className="popup-content" >
               <span>
@@ -79,17 +79,18 @@ const Timer = ({title, startTime, image}) => {
              </div>
         ) : (
       <>
-          <img 
-            src={image}
-            style=
-            {{ 
-                width: '45%', 
-                height: 'auto',
-                transform: title === 'Chill Dough' ? 'rotate(-25deg)' : 'none',
-                margin: '0 auto 0.2rem',
-            }} 
-          />
-          <h1 style={{fontSize: '10rem', margin: 0}}>{time}</h1>
+            <img 
+              src={image}
+              style=
+              {{ 
+                  width: '45%', 
+                  height: 'auto',
+                  transform: title === 'Chill Dough' ? 'rotate(-25deg)' : 'none',
+                  margin: '0 auto 0.2rem',
+              }} 
+            />
+            <h1 style={{fontSize: '10rem', margin: 0}}>{time}</h1>
+            <h2 style={{fontSize: '2rem', margin: 0}}>second</h2>
           <div style={{ 
               display: 'flex', 
               fontSize: '3rem',
