@@ -42,7 +42,7 @@ function Home () {
                         alt={label}
                         style=
                         {{ 
-                            width: '45%', 
+                            width: '65%', 
                             height: 'auto',
                             transform: label === 'Chill dough' ? 'rotate(-25deg)' : 'none',
                         }}

@@ -8,3 +8,38 @@
     text-align: center;
     min-width: 140px;
 }
+
+.popup-content {
+    background-color: rgb(233, 208, 151);
+    position: relative;
+    border: 4px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    padding: '1rem 2rem';
+    position: 'absolute';
+    top: '6rem';
+    left: 0;
+    width: 100vw;       /* Full screen width */
+    height: 100vh;      /* Full screen height */
+}
+
+
+.popup-content span {
+    font-size: 5rem;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.popup-content button {
+    font-size: 2rem;
+    padding: 0.75rem 1.5rem; 
+    font-family: 'Patrick Hand', cursive;
+    border-radius: 999px;  
+    text-align: center;
+    display: block;
+    margin: 5rem auto 0; /* top margin for spacing */
+}
