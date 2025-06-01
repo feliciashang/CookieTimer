@@ -5,6 +5,7 @@ import './Timer.css';
 const Timer = ({title, startTime, image}) => {
   console.log(image)
   const [time, setTime] = useState(startTime)
+  const [isPause, setPause] = useState(false)
   const intervalRef = useRef(null);
 
   useEffect(() => {
@@ -32,6 +33,19 @@ const Timer = ({title, startTime, image}) => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current)
       intervalRef.current = null;
+      setPause(true)
+    } else {
+      intervalRef.current = setInterval(() => {
+        setTime(prevTime => {
+          if (prevTime <= 1) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = null;
+            return 0;
+          }
+          return prevTime - 1;
+        });
+      }, 1000);
+      setPause(false)
     }
   }
   return (
@@ -58,10 +72,10 @@ const Timer = ({title, startTime, image}) => {
           marginBottom: 0}}
       >
         <button className="Button" onClick={pauseTimer}>
-          Pause
+          {isPause ? 'Resume' : 'Pause'}
         </button>
         <Link to="/">
-          <button className="Button">Back to Home</button
+          <button className="Button">Back</button
         ></Link>
       </div>
     </div>
