@@ -4,7 +4,7 @@ import cookieImage from './assets/cookieImage.jpg';
 import fanImage from './assets/fan.png';
 import ovenImage from './assets/ovenImage.png';
 import rollerImage from './assets/roller.png';
-
+import heart from './assets/yellow-heart.png';
 
 function Home () {
     const steps = [
@@ -15,9 +15,12 @@ function Home () {
   ];
     return (
         <div style={{textAlign: 'center'}}>
-            <h1 style={{fontSize: '5rem'}}>
-                Cookie Timer
-            </h1>
+            <div style={{ display: 'flex', justifyContent: 'center',alignItems: 'center'}}> 
+                <h1 style={{fontSize: '5rem'}}>
+                    Cookie Timer
+                </h1>
+                <img style={{height: '50px',  width: '50px', marginLeft: '10px'}} src={heart}/>
+            </div>
             <p style={{fontSize: '3rem'}}>
                 Which step are you on?
             </p>

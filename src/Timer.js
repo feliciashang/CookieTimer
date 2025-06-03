@@ -10,7 +10,7 @@ const Timer = ({title, startTime, image}) => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    if (time == 58) {
+    if (time == 0) {
     setShowPopup(true)
     }
   }, [time]
