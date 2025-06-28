@@ -6,6 +6,7 @@ import Home from './Home';
 function App() {
   return (
     <Router>
+      <div className="pixel-bg">
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/dough" element={<Timer title="Chill Dough" startTime={30} />} />
@@ -13,6 +14,7 @@ function App() {
         <Route path="/bake" element={<Timer  title="Bake" startTime={60} />} />
         <Route path="/cool" element={<Timer  title="Cool" startTime={60}/>} />
       </Routes>
+      </div>
     </Router>
   );
 }
